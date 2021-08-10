@@ -1,0 +1,81 @@
+.Container {
+  margin: 20px;
+  padding: 15px 20px;
+  border: 1px solid #ff3366;
+  border-radius: 30px;
+  background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+h1,
+h2 {
+  text-align: center;
+  color: #ff3366;
+}
+h1 {
+  font-family: "Zen Loop", cursive;
+  font-size: 100px;
+}
+h2 {
+  font-family: "Kavivanar", cursive;
+}
+p {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #ff3366;
+}
+form {
+  margin-left: 170px;
+  margin-bottom: 20px;
+}
+::placeholder {
+  color: #ff3366;
+  padding: 15px 40px;
+  margin: 5px auto;
+}
+input {
+  background: transparent;
+  color: #ff3366;
+  margin: 5px auto;
+  font-size: 16px;
+  padding: 15px 40px;
+  border-radius: 30px;
+  box-shadow: 2px 5px 5px #c6c3cd;
+  transition: all 200ms ease-in-out;
+  border: 1px solid #ff3366;
+}
+input:hover {
+  background: #ff3366;
+  color: white;
+  cursor: pointer;
+}
+.date {
+  text-align: right;
+  margin-right: 170px;
+  margin-top: -100px;
+}
+.card {
+  text-align: center;
+  margin: 20px;
+  padding: 15px 20px;
+  border: 1px solid #ff3366;
+  border-radius: 30px;
+  background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+#today-temperature {
+  font-size: 48px;
+}
+
+#today-icon {
+  font-size: 96px;
+  padding: 32px;
+}
+#info {
+  padding: 32px;
+}
+.days,
+.temperature {
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #ff3366;
+}
+.conditions {
+  font-size: 50px;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kavivanar&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="Container">
+      <h1>-Weather-</h1>
+      <form id="find-city">
+        <input type="text" id="enter-city" placeholder="Enter City..." />
+        <br />
+        <input type="submit" id="search-button" value="Search" />
+        <input type="submit" id="location-button" value="Location" />
+      </form>
+      <div class="date">
+        <p id="today">Wednesday 21st July 2021</p>
+        <p id="time">13:30 GMT</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text" id="your-city">Manchester, England</p>
+              <p class="card-text" id="today-temperature">30˚C</p>
+              <span class="units">
+                <a href="#" id="change-to-celsius">°C</a> |
+                <a href="#" id="change-to-farenheit">°F</a>
+              </span>
+              <p class="card-text" id="today-high-low">
+                -1/<strong>35</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body" id="today-icon">
+              <p class="card-text">☀️</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body" id="info">
+              <p class="card-text" id="today-condition">Condition: Sunny</p>
+              <p class="card-text" id="today-humidity">Humidity: 45</p>
+              <p class="card-text" id="today-sunrise">Sunrise: 04:59</p>
+              <p class="card-text" id="today-sunset">Sunset: 21:32</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <h2>5-Day Forecast</h2>
+      <br />
+      <div class="row justify-content-center days">
+        <div class="col-2">Mon</div>
+        <div class="col-2">Tue</div>
+        <div class="col-2">Wed</div>
+        <div class="col-2">Thu</div>
+        <div class="col-2">Fri</div>
+      </div>
+      <div class="row justify-content-center conditions">
+        <div class="col-2">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">☁️</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">☀️</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">⛅️</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">🌧</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">☀️</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center temperature">
+        <div class="col-2">14˚c/<strong>21˚c</strong></div>
+        <div class="col-2">20˚c/<strong>25˚c</strong></div>
+        <div class="col-2">16˚c/<strong>23˚c</strong></div>
+        <div class="col-2">10˚c/<strong>19˚c</strong></div>
+        <div class="col-2">14˚c/<strong>22˚c</strong></div>
+      </div>
+    </div>
+    <script src="javascript.js"></script>
+  </body>
+</html>
