@@ -59,7 +59,6 @@ let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", showCurrentPosition);
 
 function showTemperature(response) {
-  console.log(response.data);
   temperature = Math.round(response.data.main.temp);
   high = Math.round(response.data.main.temp_max);
   low = Math.round(response.data.main.temp_min);
