@@ -1,5 +1,5 @@
 .Container {
-  margin: 20px;
+  margin: 20px auto;
   padding: 15px 20px;
   border: 1px solid #ff3366;
   border-radius: 30px;
@@ -69,6 +69,7 @@ input:hover {
 }
 #info {
   padding: 32px;
+  text-transform: capitalize;
 }
 .days,
 .temperature {

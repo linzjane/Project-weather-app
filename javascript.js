@@ -56,6 +56,7 @@ let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", showCurrentPosition);
 
 function showTemperature(response) {
+  console.log(response.data);
   temperature = Math.round(response.data.main.temp);
   high = Math.round(response.data.main.temp_max);
   low = Math.round(response.data.main.temp_min);
@@ -63,14 +64,8 @@ function showTemperature(response) {
   let place = response.data.sys.country;
   let condition = response.data.weather[0].description;
   let humidity = response.data.main.humidity;
-  let sunriseData = new Date(response.data.sys.sunrise);
-  let sunriseHours = sunriseData.getHours();
-  let sunriseMinutes = sunriseData.getMinutes();
-  let sunrise = `${sunriseHours}:${sunriseMinutes}`;
-  let sunsetData = new Date(response.data.sys.sunset);
-  let sunsetHours = sunsetData.getHours();
-  let sunsetMinutes = sunsetData.getMinutes();
-  let sunset = `${sunsetHours}:${sunsetMinutes}`;
+  let wind = Math.round(response.data.wind.speed);
+  let precipitation = response.data.main.humidity;
   let temp = document.querySelector("#today-temperature");
   temp.innerHTML = `${temperature}˚C`;
   let location = document.querySelector("#your-city");
@@ -81,10 +76,10 @@ function showTemperature(response) {
   todaycondition.innerHTML = `Condition: ${condition}`;
   let todayhumidity = document.querySelector("#today-humidity");
   todayhumidity.innerHTML = `Humidity: ${humidity}%`;
-  let todaysunrise = document.querySelector("#today-sunrise");
-  todaysunrise.innerHTML = `Sunrise: ${sunrise}`;
-  let todaysunset = document.querySelector("#today-sunset");
-  todaysunset.innerHTML = `Sunset: ${sunset}`;
+  let windspeed = document.querySelector("#today-wind");
+  windspeed.innerHTML = `Wind: ${wind}mph`;
+  let precipitationchance = document.querySelector("#today-precipitation");
+  precipitationchance.innerHTML = `Precipitation: ${precipitation}%`;
 }
 
 function changeToFarenheit(event) {
