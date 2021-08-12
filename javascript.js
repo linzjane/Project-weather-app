@@ -1,6 +1,9 @@
 let now = new Date();
 let date = now.getDate();
 let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
 let year = now.getFullYear();
 let minutes = now.getMinutes();
 if (minutes < 10) {
