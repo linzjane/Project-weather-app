@@ -71,13 +71,13 @@ input:hover {
   padding: 32px;
   text-transform: capitalize;
 }
-.days,
-.temperature {
+#forecast-days,
+#forecast-temperature {
   text-align: center;
   font-family: "Open Sans Condensed", sans-serif;
   color: #ff3366;
 }
-.conditions {
+#forecast-conditions {
   font-size: 50px;
 }
 .author {
