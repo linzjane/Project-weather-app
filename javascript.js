@@ -67,7 +67,6 @@ function showTemperature(response) {
   let condition = response.data.weather[0].description;
   let humidity = response.data.main.humidity;
   let wind = Math.round(response.data.wind.speed);
-  let precipitation = response.data.main.humidity;
   let icon = response.data.weather[0].icon;
   let temp = document.querySelector("#today-temperature");
   temp.innerHTML = `${temperature}˚C`;
@@ -81,8 +80,6 @@ function showTemperature(response) {
   todayhumidity.innerHTML = `Humidity: ${humidity}%`;
   let windspeed = document.querySelector("#today-wind");
   windspeed.innerHTML = `Wind: ${wind}mph`;
-  let precipitationchance = document.querySelector("#today-precipitation");
-  precipitationchance.innerHTML = `Precipitation: ${precipitation}%`;
   let iconimage = document.querySelector("#today-icon");
   iconimage.setAttribute(
     "src",

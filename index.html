@@ -72,9 +72,6 @@
               <p class="card-text" id="today-condition">Condition: Sunny</p>
               <p class="card-text" id="today-humidity">Humidity: 45%</p>
               <p class="card-text" id="today-wind">Wind: 11 mph</p>
-              <p class="card-text" id="today-precipitation">
-                Precipitation: 1%
-              </p>
             </div>
           </div>
         </div>
@@ -82,14 +79,14 @@
       <hr />
       <h2>5-Day Forecast</h2>
       <br />
-      <div class="row justify-content-center days">
+      <div class="row justify-content-center" id="forecast-days">
         <div class="col-2">Mon</div>
         <div class="col-2">Tue</div>
         <div class="col-2">Wed</div>
         <div class="col-2">Thu</div>
         <div class="col-2">Fri</div>
       </div>
-      <div class="row justify-content-center conditions">
+      <div class="row justify-content-center" id="forecast-conditions">
         <div class="col-2">
           <div class="card">
             <div class="card-body">
@@ -126,7 +123,7 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-center temperature">
+      <div class="row justify-content-center" id="forecast-temperature">
         <div class="col-2">14˚c/<strong>21˚c</strong></div>
         <div class="col-2">20˚c/<strong>25˚c</strong></div>
         <div class="col-2">16˚c/<strong>23˚c</strong></div>
