@@ -97,6 +97,17 @@ function changeToFarenheit(event) {
   converttodayHiF = Math.round((high * 9) / 5 + 32);
   converttodayLoF = Math.round((low * 9) / 5 + 32);
   todayHiloF.innerHTML = `${converttodayLoF}/<strong>${converttodayHiF}</strong>˚F`;
+
+  let forecastMin = document.querySelectorAll("#forecast-min");
+  forecastMin.forEach(function (textContent) {
+    convertForecastLoF = Math.round((tempMin * 9) / 5 + 32);
+    textContent.innerHTML = `${convertForecastLoF}`;
+  });
+  let forecastMax = document.querySelectorAll("#forecast-max");
+  forecastMax.forEach(function (textContent) {
+    convertForecastHiF = Math.round((tempMax * 9) / 5 + 32);
+    textContent.innerHTML = `${convertForecastHiF}˚F`;
+  });
 }
 let tempFarenheit = document.querySelector("#change-to-farenheit");
 tempFarenheit.addEventListener("click", changeToFarenheit);
@@ -110,6 +121,15 @@ function changeToCelsius(event) {
   converttodayHiC = high;
   converttodayLoC = low;
   todayHiloC.innerHTML = `${converttodayLoC}/<strong>${converttodayHiC}</strong>˚C`;
+
+  let forecastMinElement = document.querySelectorAll("#forecast-min");
+  forecastMinElement.forEach(function (textContent) {
+    textContent.innerHTML = tempMin;
+  });
+  let forecastMaxElement = document.querySelectorAll("#forecast-max");
+  forecastMaxElement.forEach(function (textContent) {
+    textContent.innerHTML = `${tempMax}˚C`;
+  });
 }
 let tempCelsius = document.querySelector("#change-to-celsius");
 tempCelsius.addEventListener("click", changeToCelsius);
@@ -151,7 +171,7 @@ function displayForecast(response) {
           width="60"
         />
         <div class="weather-forecast-temperatures">
-        <span class="weather-forecast-temperature-min"> ${tempMin}</span>/<strong><span class="weather-forecast-temperature-max"> ${tempMax}°C </span></strong>
+        <span id="forecast-min" class="weather-forecast-temperature-min">${tempMin}</span>/<strong><span id="forecast-max" class="weather-forecast-temperature-max">${tempMax}</span> </strong>
         </div>
       </div>
   `;
